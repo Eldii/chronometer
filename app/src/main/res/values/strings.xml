@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chronomètre</string>
+    <string name="start">Start</string>
+    <string name="hint_chronometer">00:00</string>
+</resources>
