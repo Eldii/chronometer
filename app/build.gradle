@@ -35,4 +35,5 @@ dependencies {
     // Material design component
     def materialVersion = "1.2.0-alpha01"
     implementation "com.google.android.material:material:$materialVersion"
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
 }

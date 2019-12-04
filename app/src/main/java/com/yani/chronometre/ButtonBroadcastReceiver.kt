@@ -8,7 +8,6 @@ import android.media.ToneGenerator
 import android.os.CountDownTimer
 import android.os.VibrationEffect
 import android.os.Vibrator
-import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class ButtonBroadcastReceiver(mainActivity: MainActivity) : BroadcastReceiver() {
@@ -21,10 +20,9 @@ class ButtonBroadcastReceiver(mainActivity: MainActivity) : BroadcastReceiver() 
     private lateinit var vibrator: Vibrator
 
     override fun onReceive(context: Context?, intent: Intent?) {
-        Log.i("onReceive", "onReceive")
         // init vibrator variable
         vibrator = context!!.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-        activity.textChronometer.text = "01:00" // init 1 minute
+        activity.textChronometer.text = context.getString(R.string.init_chronometer) // init 1 minute
         if(countdown != null) countdown!!.cancel()
         initCountdown()
         countdown!!.start()
